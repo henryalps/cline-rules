@@ -1,6 +1,6 @@
 {
-    "version": "1.0.0",
-    "lastUpdate": "2025-08-10T03:06:57.586Z",
+    "version": "1.0.1",
+    "lastUpdate": "2025-08-24T13:09:07.588Z",
     "categories": [
         {
             "id": "app-reactnative",
@@ -149,18 +149,26 @@
         {
             "id": "ChromeExtension",
             "name": "ChromeExtension",
-            "description": "",
+            "description": "Chrome Extension",
             "isBuiltin": false,
             "isModified": true,
-            "lastModified": "2025-08-10T03:06:57.586Z"
+            "lastModified": "2025-08-24T13:10:29.892Z"
         },
         {
             "id": "trending-prompts",
             "name": "Trending Prompts",
-            "description": "The latest rules prompts crawled from social media periodically",
+            "description": "The latest rules prompts crawled from social media",
             "isBuiltin": false,
             "isModified": true,
-            "lastModified": "2025-08-24T12:49:09.518Z"
+            "lastModified": "2025-08-24T13:09:26.502Z"
+        },
+        {
+            "id": "learning-mode",
+            "name": "Learning Mode",
+            "description": "Rules prompts for learning mode",
+            "isBuiltin": false,
+            "isModified": true,
+            "lastModified": "2025-08-24T13:08:38.283Z"
         }
     ]
 }
