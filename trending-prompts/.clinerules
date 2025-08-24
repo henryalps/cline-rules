@@ -1,0 +1,232 @@
+### Recent Entries
+
+---
+
+#### 1. **Linus Style Prompts**
+These prompts explicitly ask the AI to imitate Linus Torvalds' coding philosophy (concise, efficient, performance-first) or his direct code review style, suitable for optimization and debugging scenarios.
+
+- **Prompt: Refactor code in Linus style**
+  - **Content**:
+    ```
+    You are Linus Torvalds, a brutally honest and performance-obsessed kernel developer. Review and refactor this code [PASTE CODE]. Identify memory leaks, inefficient loops, or bloated functions. Rewrite the core function to be clean, minimal, and blazing fast. Explain in Markdown why the original code was problematic and how your changes make it better. Focus on simplicity, performance, and maintainability. No unnecessary abstractions or "enterprise" nonsense.
+    ```
+  - **Context**:
+    User @Datou mentioned that this prompt is used to solve memory leak issues in AI-generated code. The AI initially only applied patches and failed to solve the problem completely; after using this prompt, the AI refactored the core function, generating concise and efficient code that remained stable even after 200,000 tokens.
+  - **Use Case**: Optimizing C/C++, Python, or system-level code, especially when there are performance bottlenecks (like memory leaks). Suitable for scenarios requiring extreme performance, such as kernel development or embedded systems.
+
+- **Prompt: Linus style code review**
+  - **Content**:
+    ```
+    Act as Linus Torvalds doing a code review. Review this code [PASTE CODE] in Markdown. Be brutally honest, point out every flaw, inefficiency, or bad practice. Suggest specific fixes for each issue. Prioritize performance, readability, and simplicity. If the code is garbage, say so and explain why. If it’s good, grudgingly admit it but still find something to improve.
+    ```
+  - **Context**:
+    User @jarredsumner shared a workflow: use Gemini to generate a task list, Claude to write the code, and then this prompt to have Gemini review the code in Linus's style. The prompt imitates Linus's bluntness to ensure code quality, suitable for production environments.
+  - **Use Case**: Reviewing AI-generated code to ensure high standards, suitable for backend, system programming, or projects requiring strict review.
+
+- **Prompt: Linus style game frame optimization**
+  - **Content**:
+    ```
+    You are Linus Torvalds, a game programmer obsessed with frame rates and low-level optimization. Optimize this game loop [PASTE CODE] to maximize performance. Use tricks like those Linus used to adjust game frames in his early days. Minimize CPU/GPU waste, reduce latency, and ensure smooth rendering. Explain your changes in a terse, no-nonsense tone.
+    ```
+  - **Context**:
+    Inspired by @manateelazycat, who mentioned that Linus used "tricks" to optimize game frame rates in his early days. This prompt asks the AI to imitate this low-level optimization mindset to generate efficient game loop code.
+  - **Use Case**: Optimizing real-time rendering or loop code in game development, suitable for ThreeJS, Unity, or Canvas projects.
+
+---
+
+#### 2. **Function Generation Prompts**
+These prompts are used to quickly generate code for specific functions, emphasizing clarity and iterative development, in line with the rapid prototyping philosophy of vibe coding.
+
+- **Prompt: Generate a concise Python data processing function**
+  - **Content**:
+    ```
+    Write a Python function parse_log(file_path) that reads a log file and returns a dictionary of error codes to their frequency. Only use the standard library, handle file I/O errors gracefully, and keep the code beginner-friendly with clear comments. Output only the code, no explanation.
+    ```
+  - **Context**:
+    From a post by @sethuram_dev, emphasizing the generation of concise, readable Python code for data processing tasks. The prompt specifies the standard library and error handling to reduce AI guesswork.
+  - **Use Case**: Data analysis, log processing, suitable for beginners or quick script development.
+
+- **Prompt: Generate a modern React component**
+  - **Content**:
+    ```
+    Create a React component that looks modern and minimal. It should be mobile responsive, accessible, with smooth animations, and include comments explaining each part. Use Tailwind CSS v3 and React hooks. Output in JSON format.
+    ```
+  - **Context**:
+    User @sethuram_dev mentioned that this prompt is used to generate front-end UI components, emphasizing modern design, accessibility, and structured output (JSON) for easy automation.
+  - **Use Case**: Front-end development, quickly generating React component prototypes, suitable for web applications or MVPs.
+
+- **Prompt: Explore the GitHub API**
+  - **Content**:
+    ```
+    Using the GitHub REST API in Python, show how to list all repositories for a user. Use the requests library, handle authentication with a token, and include error handling. Provide only the code snippet.
+    ```
+  - **Context**:
+    From @sethuram_dev, suitable for quickly learning a new API or generating API integration code. The prompt specifies the tool (requests) and constraints (authentication, error handling).
+  - **Use Case**: API integration, rapid prototyping, or learning a new library.
+
+- **Prompt: Generate a full-stack application**
+  - **Content**:
+    ```
+    Build a full-stack to-do app using React and Node.js. Include:
+    - A homepage with a form to add tasks
+    - A backend API with CRUD endpoints
+    - LocalStorage to persist tasks on refresh
+    - Minimalist design with Tailwind CSS
+    - Mobile-responsive layout
+    - Comments explaining key sections
+    Output as a ZIP file with frontend and backend folders.
+    ```
+  - **Context**:
+    Shared by @sethuram_dev, used for quickly generating a full-stack application, including front-end, back-end, and persistent storage. Suitable for MVP development or full-stack learning.
+  - **Use Case**: Full-stack prototype development, quickly deploying simple applications.
+
+---
+
+#### 3. **Design and Vibe Prompts**
+These prompts focus on UI design or visual style generation, emphasizing the creativity and intuitiveness of vibe coding.
+
+- **Prompt: Generate an Apple-Monocle style UI**
+  - **Content**:
+    ```
+    Create a UI that feels like Apple meets Monocle Magazine. Neutral, editorial, timeless. Use Tailwind CSS, ensure mobile responsiveness, and include a screenshot or asset to guide the design. Output the HTML/CSS/JS code with comments.
+    ```
+  - **Context**:
+    Users @sethuram_dev and @vibecodingguru mentioned using this to generate UIs with a specific style, emphasizing visual consistency and accessibility. Adding assets (like screenshots) can prevent sloppy output.
+  - **Use Case**: Front-end UI design, quickly generating branded interfaces, suitable for product prototypes or marketing pages.
+
+- **Prompt: UX expert review**
+  - **Content**:
+    ```
+    Assume you’re a brutal UX expert. Tell me what’s *wrong* with this landing page at first glance. [PASTE URL OR CODE] Provide a Markdown report with specific issues and suggested fixes.
+    ```
+  - **Context**:
+    From @sethuram_dev, used to get critical feedback on UI/UX from an AI, imitating an expert's perspective, suitable for iterative design.
+  - **Use Case**: UI/UX optimization, quickly diagnosing issues on a front-end page.
+
+---
+
+#### 4. **Game Development Prompts**
+These prompts focus on game development, combined with the rapid iteration features of vibe coding.
+
+- **Prompt: Generate a game feature plan**
+  - **Content**:
+    ```
+    From this PRD [PASTE PRD], create an actionable, step-by-step plan using a modified vertical slice implementation approach suitable for LLM-assisted coding. Think about different plan styles, select the best one, and explain why in Markdown. Ensure the plan is concise, structured, and guides the LLM effectively.
+    ```
+  - **Context**:
+    From @freethink, combined with discussions from the 2025 Vibe Coding Game Jam, used to generate a development plan from a requirements document, suitable for complex game projects.
+  - **Use Case**: Game development planning, structured development combined with a PRD.
+
+- **Prompt: Optimize game visual effects**
+  - **Content**:
+    ```
+    Enhance this game [PASTE CODE]:
+    - Make enemy ships futuristic, detailed, and visually striking
+    - Add animations to make enemies feel alive
+    - Introduce 3 distinct enemy types with unique attack patterns
+    - Implement a boss enemy at high scores
+    - Improve player ship with thruster animation and bullet glow effect
+    - Add dynamic background with stars and nebulas
+    - Enhance UI (health bars, score, power-ups) with smooth animations
+    Output the updated code with comments explaining changes.
+    ```
+  - **Context**:
+    From @freethink, inspired by the 2025 Vibe Coding Game Jam, used to enhance game visual and interactive effects, suitable for rapid iteration.
+  - **Use Case**: Game development, optimizing visual effects for ThreeJS, Canvas, or Unity projects.
+
+---
+
+#### 5. **Testing and Optimization Prompts**
+These prompts are used to generate test code or optimize existing code, emphasizing robustness and performance.
+
+- **Prompt: Automated test cases**
+  - **Content**:
+    ```
+    Generate Pytest cases for our Flask API [PASTE API CODE] covering edge cases. Include tests for invalid inputs, authentication failures, and rate limiting. Output in a single Python file with comments.
+    ```
+  - **Context**:
+    Shared by @sethuram_dev, used to generate test code, emphasizing edge cases to ensure API robustness.
+  - **Use Case**: Backend development, automated test generation, suitable for Flask or Django projects.
+
+- **Prompt: Code abstraction optimization**
+  - **Content**:
+    ```
+    Given this React component, suggest reusable abstractions and split logic into smaller composable hooks. [PASTE CODE] Output the refactored code with comments explaining the changes.
+    ```
+  - **Context**:
+    User @sethuram_dev mentioned using this to optimize front-end code structure and generate reusable React hooks.
+  - **Use Case**: Front-end development, optimizing the maintainability of React components.
+
+---
+
+#### 6. **Structured Template Prompts**
+These prompts provide a structured framework, suitable for complex projects or multi-stage development.
+
+- **Prompt: The One Prompt Template**
+  - **Content**:
+    ```
+    Create an app based on this structure:
+    - 💡 Big Idea: [e.g., Liberate users from manual tracking by automating habit building.]
+    - 🎯 Core Brief: [e.g., Target: Busy professionals; Challenge: Time management; Outcome: Increased productivity.]
+    - 🗂️ Layout: [e.g., Top: Header with nav; Middle: Main content; Bottom: Footer with links.]
+    - 🔀 Vibe Flows: [e.g., User clicks button → System processes data → Show success toast.]
+    - 🎨 Style and Notes: [e.g., Minimalist design, dark mode, WCAG compliant.]
+    - 🗄️ Data and Storage: [e.g., User table with ID, name; LocalStorage for sessions.]
+    - 🔌 Data and Services: [e.g., Stripe for payments, OAuth for auth.]
+    - 🤖 AI (optional): [e.g., Use AI for personalized recommendations.]
+    - ✅ Finish Up: [e.g., Ensure modular code; Review for clarity.]
+    Output the code and a Markdown explanation of how it meets each section.
+    ```
+  - **Context**:
+    From @vibecodingguru and the Vibe Coding Guide on GitHub, used for structured development of complex applications, covering requirements to implementation.
+  - **Use Case**: Full-stack development, quickly generating a structured MVP or prototype.
+
+- **Prompt: One-Shot PRD + Build Orchestrator**
+  - **Content**:
+    ```
+    # Questionnaire (YAML format)
+    app_idea: "[Describe your app idea here.]"
+    target_audience: "[Who is it for?]"
+    key_features: "[List 3-5 main features.]"
+    tech_stack: "[Preferred frameworks, e.g., React, Node.js.]"
+    design_style: "[e.g., Minimalist, vibrant.]"
+    authentication: "[e.g., Email, OAuth.]"
+    data_model: "[e.g., Users, Posts tables.]"
+    integrations: "[e.g., Stripe, Google Maps.]"
+    Generate a PRD and a step-by-step build plan. Include design language, auth, data model, and integrations. Add interaction rules (e.g., "Ask clarifying questions if needed") and best practices (e.g., "Ensure scalability"). Output in Markdown.
+    ```
+  - **Context**:
+    From @lovable_dev, used to generate a PRD and development plan from a vague idea, suitable for non-technical users or rapid prototyping.
+  - **Use Case**: MVP development, suitable for entrepreneurs or non-technical teams.
+
+---
+
+#### 7. **Other Creative Prompts**
+These prompts are used for non-technical or creative scenarios, emphasizing the intuitiveness of vibe coding.
+
+- **Prompt: Motivational development mindset**
+  - **Content**:
+    ```
+    Think of AI as your creative co-pilot. Less manual grind, more strategic magic. Prompt smart, iterate fast, build wild ideas in minutes!
+    ```
+  - **Context**:
+    Shared by @sethuram_dev, used to motivate developers to adopt vibe coding, emphasizing rapid iteration and creativity-driven development.
+  - **Use Case**: Motivating a team or individual to try vibe coding, suitable for brainstorming or creative projects.
+
+- **Prompt: Business model generation**
+  - **Content**:
+    ```
+    Pitch 3 freemium models for a solo B2B SaaS with these features: [PASTE FEATURES]. Include pricing tiers, value propositions, and target audience for each model.
+    ```
+  - **Context**:
+    From @sethuram_dev, used to generate business models, suitable for entrepreneurs or product managers.
+  - **Use Case**: Product planning, quickly generating SaaS business models.
+
+- **Prompt: Brand story generation**
+  - **Content**:
+    ```
+    Write a brand story for my startup. The founder quit their job to solve [PROBLEM]. Focus on emotional connection, target audience [AUDIENCE], and core mission [MISSION]. Output in Markdown.
+    ```
+  - **Context**:
+    From @sethuram_dev, used to generate marketing content, combined with the creativity of vibe coding.
+  - **Use Case**: Brand building, quickly generating marketing copy.

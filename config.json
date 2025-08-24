@@ -153,6 +153,14 @@
             "isBuiltin": false,
             "isModified": true,
             "lastModified": "2025-08-10T03:06:57.586Z"
+        },
+        {
+            "id": "trending-prompts",
+            "name": "Trending Prompts",
+            "description": "The latest rules prompts crawled from social media periodically",
+            "isBuiltin": false,
+            "isModified": true,
+            "lastModified": "2025-08-24T12:49:09.518Z"
         }
     ]
 }
